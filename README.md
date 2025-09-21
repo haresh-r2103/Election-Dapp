@@ -20,3 +20,21 @@ Secure: Ethereum blockchain ensures data integrity and prevents tampering.
 
 Responsive UI: Modern, clean interface with feature sections and election cards.
 
+PROJECT-DEMO: https://youtu.be/RCf6TPMfTbM
+
+Installation
+
+Clone the repository:
+
+git clone https://github.com/haresh-r2103/blockchain-election.git
+cd blockchain-election
+
+
+Install dependencies:
+
+npm install
+
+
+Start the development server:
+
+npm start
