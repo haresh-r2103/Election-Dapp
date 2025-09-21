@@ -26,7 +26,7 @@ Installation
 
 Clone the repository:
 
-git clone https://github.com/haresh-r2103/blockchain-election.git
+git clone [https://github.com/haresh-r2103/blockchain-election.git](https://github.com/haresh-r2103/Election-Dapp.git)
 cd blockchain-election
 
 
