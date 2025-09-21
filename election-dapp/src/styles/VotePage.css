@@ -1,0 +1,301 @@
+/* ===== Global Reset & Base Styles ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: linear-gradient(135deg, #f4f6f9 0%, #e9ecf1 100%);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 0;
+}
+
+/* ===== Header / Title Section ===== */
+header {
+  width: 100%;
+  padding: 30px 20px;
+  text-align: center;
+  background: linear-gradient(90deg, #0a3d62, #1e88e5);
+  color: white;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== Page Container ===== */
+.vote-page {
+  flex-grow: 1;
+  width: 100%;
+  max-width: 1000px;
+  margin: 40px auto;
+  background: linear-gradient(to bottom, #ffffff, #f8fafc);
+  padding: 50px 40px;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(10, 61, 98, 0.15),
+              0 5px 15px rgba(0, 0, 0, 0.07);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+/* Gradient Top Border */
+.vote-page::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: linear-gradient(90deg, #0a3d62, #1e88e5, #0a3d62);
+  z-index: 1;
+}
+
+/* ===== Election Title ===== */
+.vote-page h2 {
+  text-align: center;
+  color: #0a3d62;
+  font-size: 3rem;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 700;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+  padding-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.vote-page h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 4px;
+  background: linear-gradient(90deg, #0a3d62, #1e88e5);
+  border-radius: 2px;
+}
+
+/* ===== Election Info ===== */
+.vote-page p {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #4a5568;
+  margin-bottom: 40px;
+  line-height: 1.8;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ===== Candidates List ===== */
+.vote-page ul {
+  list-style: none;
+  padding: 0;
+  display: flex;.vote-page li {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e2e8f0;
+}
+  flex-wrap: wrap; /* allows wrapping on smaller screens */
+  gap: 20px;
+  justify-content: center; /* center the row */
+  margin-top: 30px;
+}
+
+
+
+.vote-page li:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(10, 61, 98, 0.2), 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Candidate Header */
+.candidate-header {
+  background: linear-gradient(90deg, #0a3d62, #1e88e5);
+  color: white;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.candidate-icon {
+  width: 45px;
+  height: 45px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.vote-page li:hover .candidate-icon {
+  transform: scale(1.15) rotate(5deg);
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.candidate-name {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.candidate-details {
+  padding: 25px;
+  flex-grow: 1;
+}
+
+.candidate-description {
+  color: #4a5568;
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+.vote-count {
+  display: inline-block;
+  background: #f1f7ff;
+  color: #0a3d62;
+  padding: 6px 14px;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+/* ===== Vote Button ===== */
+.vote-action {
+  padding: 20px;
+  background: #f8fafc;
+  border-top: 1px solid #e2e8f0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.vote-page button {
+  padding: 12px 28px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #0a3d62, #1e88e5);
+  color: white;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  box-shadow: 0 6px 12px rgba(10, 61, 98, 0.25);
+}
+
+.vote-page button:disabled {
+  background: #cbd5e0;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.vote-page button:hover:not(:disabled) {
+  background: linear-gradient(120deg, #0a3d62, #1e88e5, #42a5f5);
+  box-shadow: 0 10px 20px rgba(10, 61, 98, 0.35);
+  transform: translateY(-3px) scale(1.03);
+}
+
+.vote-page button:active:not(:disabled) {
+  transform: translateY(0) scale(0.98);
+  box-shadow: 0 4px 12px rgba(10, 61, 98, 0.25);
+}
+
+/* ===== Voting Status ===== */
+.vote-page .status {
+  text-align: center;
+  font-weight: 600;
+  margin-top: 35px;
+  padding: 18px;
+  border-radius: 12px;
+  background: #fff5f5;
+  color: #e53e3e;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  position: relative;
+  animation: slideInStatus 0.5s ease forwards;
+}
+
+.status::before {
+  content: '!';
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 26px;
+  height: 26px;
+  background: #e53e3e;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .vote-page {
+    padding: 30px 20px;
+    margin: 20px auto;
+  }
+  
+  .vote-page h2 {
+    font-size: 2.2rem;
+  }
+  
+  .vote-page ul {
+    grid-template-columns: 1fr;
+  }
+  
+  .status::before {
+    position: static;
+    margin-right: 10px;
+    transform: none;
+    display: inline-flex;
+  }
+}
+
+/* ===== Animations ===== */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.voted {
+  animation: pulse 0.5s ease;
+}
+
+@keyframes slideInStatus {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

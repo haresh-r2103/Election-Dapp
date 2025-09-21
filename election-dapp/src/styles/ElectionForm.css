@@ -1,0 +1,100 @@
+/* ===== Global Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ===== Form Popup Overlay ===== */
+.form-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #f4f6f9;
+  border: 2px solid #0a3d62;
+  border-radius: 10px;
+  padding: 30px 40px;
+  width: 400px;
+  max-width: 90%;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* ===== Headings ===== */
+.form-popup h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #0a3d62;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* ===== Form Styling ===== */
+.form-popup form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-popup label {
+  margin-bottom: 5px;
+  font-weight: 600;
+  color: #0a3d62;
+}
+
+.form-popup input {
+  padding: 10px 12px;
+  margin-bottom: 15px;
+  border: 1.5px solid #0a3d62;
+  border-radius: 5px;
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.3s;
+}
+
+.form-popup input:focus {
+  border-color: #082c47;
+  box-shadow: 0 0 5px rgba(10, 61, 98, 0.3);
+}
+
+/* ===== Buttons ===== */
+.form-popup button {
+  padding: 12px;
+  margin-top: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.form-popup button[type="submit"] {
+  background-color: #0a3d62;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.form-popup button[type="submit"]:hover {
+  background-color: #082c47;
+  transform: translateY(-2px);
+}
+
+.form-popup button[type="button"] {
+  background-color: #d9534f;
+  color: white;
+}
+
+.form-popup button[type="button"]:hover {
+  background-color: #c12e2a;
+  transform: translateY(-2px);
+}
+
+/* ===== Animation ===== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translate(-50%, -60%); }
+  to { opacity: 1; transform: translate(-50%, -50%); }
+}
